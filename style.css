@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #bbb;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+#game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+h1 {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+#minefield {
+  display: inline-block;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #eee;
+  font-weight: bold;
+  user-select: none;
+  transition: backgorud-color 0.2s;
+}
+
+.cell.revealed {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.cell.mine {
+  background-color: red;
+}
+
+.cell.incorrect-flag {
+  background-color: orange;
+}
+
+.cell.flagged {
+  background-color: yellow;
+}
+
+.cell.highlighted {
+  background-color: greenyellow;
+}
+
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 2px solid #888;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+#popup-content {
+  text-align: center;
+}
+
+#popup-message {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#restart-button {
+  background-color: cornflowerblue;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+#restart-button:hover {
+  background-color: blue;
+}
+
+.cell[data-mines="1"] {
+  color: blue;
+}
+
+.cell[data-mines="2"] {
+  color: green;
+}
+
+.cell[data-mines="3"] {
+  color: red;
+}
+
+.cell[data-mines="4"] {
+  color: darkblue;
+}
+
+.cell[data-mines="5"] {
+  color: darkred;
+}
+
+.cell[data-mines="6"] {
+  color: cyan;
+}
+
+.cell[data-mines="7"] {
+  color: gray;
+}
+
+.cell[data-mines="8"] {
+  color: black;
+}
