@@ -11,30 +11,17 @@
     <h1>Minersweeper Game</h1>
     <div id="controls">
       <label for="level">Choose Level:</label>
-      <select name="level" id="level">
+      <select name="level" id="level" onchange="game.startGame()">
         <option value="novice">Novice (9x9, 10 mines)</option>
         <option value="intermediate">Intermediate (16x16, 40 mines)</option>
         <option value="expert">Expert (30x60, 99 mines)</option>
         <option value="superhuman">Superhuman (50x50, 500 mines)</option>
       </select>
     </div>
-    <div id="minefield">
-      <div class="row">
-        <div class="cell revealed"></div>
-        <div class="cell mine">💣</div>
-        <div class="cell incorrect-flag">❌</div>
-        <div class="cell flagged">🚩</div>
-        <div class="cell highlighted"></div>
-        <div class="cell" data-mines="1">1</div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-    </div>
+    <div id="minefield"></div>
     <div id="popup">
       <div id="popup-content">
-        <p id="popup-message">You Win!</p>
+        <p id="popup-message"></p>
         <button id="restart-button">Play Again</button>
       </div>
     </div>
